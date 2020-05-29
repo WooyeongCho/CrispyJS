@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Mont_ExtraLight";
+    src: url('../fonts/Mont-ExtraLightDEMO.woff2') format('woff2'),
+         url('../fonts/Mont-ExtraLightDEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Mont_Heavy";
+    src: url('../fonts/Mont-HeavyDEMO.woff2') format('woff2'),
+         url('../fonts/Mont-HeavyDEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Noto_Black";
+    src: url('../fonts/NotoSansKR-Black.woff2') format('woff2'),
+         url('../fonts/NotoSansKR-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Noto_Light";
+    src: url('../fonts/NotoSansKR-Light.woff2') format('woff2'),
+         url('../fonts/NotoSansKR-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Noto_Medium";
+    src: url('../fonts/NotoSansKR-Medium.woff2') format('woff2'),
+         url('../fonts/NotoSansKR-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Noto_Regular";
+    src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+         url('../fonts/NotoSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

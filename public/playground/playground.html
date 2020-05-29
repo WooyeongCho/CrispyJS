@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/src/assets/css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="/src/assets/crispyjs/main.css">
+        <link href="/src/assets/icons/css/all.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>crispy Editor | 만들기</title>
+    </head>
+    <body>
+        <div class="wh100">
+            <header>
+                <span onclick="window.location.href = '/';">
+                    <h1 class="boldlogo inline noselect white">crispy </h1>
+                    <h1 class="lightlogo inline noselect white">Editor</h1>  
+                </span>
+            </header>
+            <svg id="playground">
+                
+                <defs>
+                    <pattern id="polka-dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">                      
+                        <circle fill="#393939" cx="25" cy="25" r="3">
+                        </circle>
+                    </pattern>
+                    <filter id="shadow">
+                        <feDropShadow dx="0" dy="0" stdDeviation="5" 
+                            flood-color="yellow" flood-opacity="1"/>
+                    </filter>
+                    
+                    <filter id="outline">
+                        <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
+                        <feFlood flood-color="yellow" flood-opacity="1" result="PINK"></feFlood>
+                        <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
+                        
+                        <feMerge>
+                        <feMergeNode in="OUTLINE" />
+                        <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                    </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="#262626"></rect> 
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>
+
+                <g class="scriptBlock">
+                    <g > 
+                        <g> 
+                            <path d="m 0 20 c 0 0 0 -20 20 -20 h 90 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -90 z" fill="#47D680" stroke="#3AB16A" class="blockSkeleton draggable"></path>
+                        </g>
+                        <g class="innerBlockGroup">
+                            <text class="fas fa-flag"> </text>
+                            <foreignObject x="15" y="12.5" width="20" height="20" class="draggable">
+                                <i class="fas fa-flag draggable" style="color:white; font-size:15px;"></i>
+                            </foreignObject>
+                            <text x="35" y="26" fill="white" class="draggable noselect">시작했을 때</text>
+                        </g>              
+                    </g>
+                    <g class="scriptBlock" transform="translate(0,40)" > 
+                        <g>
+                            <path d="m 0 0 h 20 h 180 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -180 z" fill="#F24977" stroke="#CD3D64" class="blockSkeleton draggable" transform="translate(0,0)"></path>
+                            <foreignObject x="15" y="12.5" width="20" height="20" class="draggable">
+                                <i class="fas fa-share draggable" style="color:white; font-size:15px;"></i>
+                            </foreignObject>
+                            <g class="innerBlockGroup" transform="translate(20 0)">                            
+                                <path d="m 17 10 c 0 0 0 -3 3 -3 h 40 c 0 0 3 0 3 3 v 20 c 0 0 0 3 -3 3 h -40 c 0 0 -3 0 -3 -3 z" fill="#FEDEA0" stroke="#DFBD7A" stroke-width="2" transform="translate(1,0)"></path>
+                                <text x="70" y="26" fill="white" class="draggable noselect">(을)를 출력하기</text>
+                            </g>   
+                            <g class="scriptBlock" transform="translate(0,40)" > 
+                                <g>
+                                    <path d="m 0 0 h 20 h 180 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -180 z" fill="#F24977" stroke="#CD3D64" class="blockSkeleton draggable" transform="translate(0,0)"></path>
+                                    <foreignObject x="15" y="12.5" width="20" height="20" class="draggable">
+                                        <i class="fas fa-share draggable" style="color:white; font-size:15px;"></i>
+                                    </foreignObject>
+                                    <g class="innerBlockGroup" transform="translate(20 0)">                            
+                                        <path d="m 17 10 c 0 0 0 -3 3 -3 h 40 c 0 0 3 0 3 3 v 20 c 0 0 0 3 -3 3 h -40 c 0 0 -3 0 -3 -3 z" fill="#FEDEA0" stroke="#DFBD7A" stroke-width="2" transform="translate(1,0)"></path>
+                                        <text x="70" y="26" fill="white" class="draggable noselect">(을)를 출력하기</text>
+                                    </g>   
+                                </g>
+                        </g>
+                        
+                    </g> 
+                </g>                
+            </svg>
+        </div>
+
+        <script src="src/assets/crispyjs/CrispyStatic.js"></script>
+        <script src="src/assets/crispyjs/Crispy.js"></script>
+    </body>
+</html>
