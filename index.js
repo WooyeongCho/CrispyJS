@@ -15,4 +15,6 @@ var app = http.createServer(function(request,response){
     response.end(fs.readFileSync(__dirname + url));
  
 });
-app.listen(3000); 
+app.listen(3000, () => {
+  console.log("port 3000\n\ngo localhost:3000/playground")
+}); 
