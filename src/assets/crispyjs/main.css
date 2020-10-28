@@ -25,16 +25,8 @@
 }
 
 #playground {
-    /* Firefox */
-    height: -moz-calc(100% - 64px);
-    /* WebKit */
-    height: -webkit-calc(100% - 64px);
-    /* Opera */
-    height: -o-calc(100% - 64px);
-    /* Standard */
-    height: calc(100% - 64px);
     width: 100%;
-    
+    height: 100%;
 }
 
 .static {

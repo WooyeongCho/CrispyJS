@@ -40,10 +40,11 @@
                 <rect x="0" y="0" width="100%" height="100%" fill="#262626"></rect> 
                 <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>
 
-                <g class="scriptBlock">
+                <g class="blockGroup">
                     <g > 
                         <g> 
-                            <path d="m 0 20 c 0 0 0 -20 20 -20 h 90 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -90 z" fill="#47D680" stroke="#3AB16A" class="blockSkeleton draggable"></path>
+                            <g class="innerBlockGroup"></g>
+                            <path d="m 0 20 c 0 0 0 -20 20 -20 h 90 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -90 z" fill="#47D680" stroke="#3AB16A" stroke-width="2" class="blockSkeleton draggable"></path>
                         </g>
                         <g class="innerBlockGroup">
                             <text class="fas fa-flag"> </text>
@@ -53,9 +54,9 @@
                             <text x="35" y="26" fill="white" class="draggable noselect">시작했을 때</text>
                         </g>              
                     </g>
-                    <g class="scriptBlock" transform="translate(0,40)" > 
+                    <g class="blockGroup" transform="translate(0,40)" > 
                         <g>
-                            <path d="m 0 0 h 20 h 180 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -180 z" fill="#F24977" stroke="#CD3D64" class="blockSkeleton draggable" transform="translate(0,0)"></path>
+                            <path d="m 0 0 h 20 h 180 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -180 z" fill="#F24977" stroke="#CD3D64" stroke-width="2" class="blockSkeleton draggable" transform="translate(0,0)"></path>
                             <foreignObject x="15" y="12.5" width="20" height="20" class="draggable">
                                 <i class="fas fa-share draggable" style="color:white; font-size:15px;"></i>
                             </foreignObject>
@@ -63,14 +64,18 @@
                                 <path d="m 17 10 c 0 0 0 -3 3 -3 h 40 c 0 0 3 0 3 3 v 20 c 0 0 0 3 -3 3 h -40 c 0 0 -3 0 -3 -3 z" fill="#FEDEA0" stroke="#DFBD7A" stroke-width="2" transform="translate(1,0)"></path>
                                 <text x="70" y="26" fill="white" class="draggable noselect">(을)를 출력하기</text>
                             </g>   
-                            <g class="scriptBlock" transform="translate(0,40)" > 
+                            <g class="blockGroup" transform="translate(0,40)" > 
                                 <g>
-                                    <path d="m 0 0 h 20 h 180 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -180 z" fill="#F24977" stroke="#CD3D64" class="blockSkeleton draggable" transform="translate(0,0)"></path>
+                                    <path d="m 0 0 h 20 h 180 c 0 0 20 0 20 20 c 0 0 0 20 -20 20 h -20 h -180 z" fill="#F24977" stroke="#CD3D64" stroke-width="2" class="blockSkeleton draggable" transform="translate(0,0)"></path>
                                     <foreignObject x="15" y="12.5" width="20" height="20" class="draggable">
                                         <i class="fas fa-share draggable" style="color:white; font-size:15px;"></i>
                                     </foreignObject>
-                                    <g class="innerBlockGroup" transform="translate(20 0)">                            
-                                        <path d="m 17 10 c 0 0 0 -3 3 -3 h 40 c 0 0 3 0 3 3 v 20 c 0 0 0 3 -3 3 h -40 c 0 0 -3 0 -3 -3 z" fill="#FEDEA0" stroke="#DFBD7A" stroke-width="2" transform="translate(1,0)"></path>
+                                    <g class="innerBlockGroup" transform="translate(20 0)">
+                                        <g>
+                                            <path d="m 17 10 c 0 0 0 -3 3 -3 h 40 c 0 0 3 0 3 3 v 20 c 0 0 0 3 -3 3 h -40 c 0 0 -3 0 -3 -3 z" fill="#FEDEA0" stroke="#DFBD7A" stroke-width="2" transform="translate(0,0)"></path>
+                                            <text x="25" y="26" fill="black" class="noselect">크리</text>
+                                        </g>                            
+                                        
                                         <text x="70" y="26" fill="white" class="draggable noselect">(을)를 출력하기</text>
                                     </g>   
                                 </g>
@@ -81,7 +86,7 @@
             </svg>
         </div>
 
-        <script src="src/assets/crispyjs/CrispyStatic.js"></script>
-        <script src="src/assets/crispyjs/Crispy.js"></script>
+        <script defer src="src/assets/crispyjs/CrispyStatic.js"></script>
+        <script defer src="src/assets/crispyjs/Crispy.js"></script>
     </body>
 </html>

@@ -4,7 +4,7 @@ let playground = document.querySelector('#playground');
 
 Crispy.engine = {
   init() {
-    initDragEvent(playground);
+    initDragEventListener(playground);
   //   playground.innerHTML +=
   //   `<defs>
   //   <pattern id="polka-dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">                      
@@ -30,16 +30,16 @@ Crispy.engine = {
   //   <rect x="0" y="0" width="100%" height="100%" fill="#262626"></rect> 
   // <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>`
 
+    
 
-
-    console.log("%c  Crispy Engine ON  ", "color: white; background-color: purple; font-size:2em;");
-    console.log("%c  Made by Wily Youth(wy24)  ", "color: purple; background-color: white; font-size:1.5em;");
+    console.log("%c  Run CrispyJS  ", "color: white; background-color: #47D680; font-size:1.5em; font-family:sans-serif; border-radius: 50px 50px 50px 0px; padding: 0.5rem; font-weight:bold;");
+    console.log("\n%cCrispyJS\n─────\n🛠️ Made by WooyeongCho(Wily Youth)\n\n🛠️ Github Repo : https://github.com/WooyeongCho/CrispyJS\n\n🎫 MIT License\n\n\nUsed icons in CrispyJS\n─────\n💚 https://fontawesome.com/\n\nThanks For Using! 🥰\n", "font-size:0.8rem; font-family:sans-serif; font-weight:bold;");
   }
 }
 
 
 
-const initDragEvent = target => {
+const initDragEventListener = target => {
   var svg = target;
   
   svg.addEventListener('mousedown', startDrag);
@@ -54,7 +54,7 @@ const initDragEvent = target => {
 
   function startDrag(evt) {
     if (evt.target.classList.contains('draggable')) {
-      selectedElement = evt.target.closest(".scriptBlock"); // 찾는거
+      selectedElement = evt.target.closest(".blockGroup"); // 찾는거
       offset = getMousePosition(evt);
       // Get all the transforms currently on this element
       var transforms = selectedElement.transform.baseVal;
